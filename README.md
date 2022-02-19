@@ -1,4 +1,6 @@
-# vue3-w-ts-cms
+# vue3-w-ts-project
+
+哞哞鴨的 vue3+webpack+ts 版本，学习版
 
 ## Project setup
 
@@ -9,7 +11,7 @@ npm install
 ### Compiles and hot-reloads for development
 
 ```
-npm run serve
+npm run dev
 ```
 
 ### Compiles and minifies for production
@@ -17,13 +19,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
