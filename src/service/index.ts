@@ -1,11 +1,17 @@
 import HBRequest from './request'
+import localCache from '@/utils/cache'
 
 const hbRequest = new HBRequest({
   baseURL: process.env.VUE_APP_BASE_URL,
   timeout: process.env.VUE_APP_TIME_OUT,
   interceptors: {
     requestInterceptor: (config) => {
-      console.log('请求成功的拦截')
+      const token = localCache.getCache('token')
+      if (token) {
+        if (config.headers) {
+          config.headers.Authorization = `Bearer ${token}`
+        }
+      }
       return config
     },
     requestInterceptorCatch: (err) => {
